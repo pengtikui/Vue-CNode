@@ -8,10 +8,6 @@ import * as filters from './filters'
 
 Vue.use(VueResource)
 
-Vue.filter('formatDate', function(time) {
-    return Date.prase(time)
-})
-
 Vue.http.options.root = 'https://cnodejs.org/api/v1'
 
 /* eslint-disable no-new */

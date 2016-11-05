@@ -11,7 +11,7 @@
 					<br>
 					<span class="meta">
 						<span class="by">by {{topic.author.loginname}}</span>
-						<span class="time">{{topic.create_at}}</span>
+						<span class="time">{{topic.create_at | formatDate}}</span>
 						<span class="comment">| {{topic.reply_count}}条回复</span>
 					</span>
 				</li>

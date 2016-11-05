@@ -6,7 +6,7 @@
 			<p class="meta">
 				浏览{{topic.visit_count}}次 |
 				by {{topic.author.loginname}}
-				{{topic.create_at}}
+				{{topic.create_at | formatDate}}
 			</p>
 			<div class="content" v-html="topic.content"></div>
 		</div>
@@ -14,7 +14,7 @@
 			<p class="item-view-comments-header">{{topic.reply_count}}条回复</p>
 			<ul class="comment-children">
 				<li class="comment" v-for="reply in topic.replies">
-					<div class="by">by {{reply.author.loginname}} {{reply.create_at}}</div>
+					<div class="by">by {{reply.author.loginname}} {{reply.create_at | formatDate}}</div>
 					<div class="text" v-html="reply.content"></div>
 				</li>
 			</ul>
