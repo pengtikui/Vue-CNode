@@ -1,6 +1,7 @@
 <template>
 	<div class="item-view">
 		<div class="item-view-header">
+			<loading v-show="loading"></loading>
 			<h1>{{topic.title}}</h1>
 			<p class="meta">
 				浏览{{topic.visit_count}}次 |
@@ -22,6 +23,8 @@
 </template>
 
 <script>
+import Loading from '../components/Loading.vue'
+
 export default {
 	data() {
 		return {
@@ -41,6 +44,9 @@ export default {
 	},
 	created() {
 		this.getTopic()
+	},
+	components: {
+		Loading
 	}
 }
 </script>
@@ -118,5 +124,8 @@ export default {
 		padding: 0 0 0 15px;
 		margin: 0 0 20px;
 		border-left: 5px solid #41b883;
+	}
+	.loading {
+		padding-top: 20em;
 	}
 </style>

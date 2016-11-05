@@ -1,6 +1,7 @@
 <template>
 	<div class="topic-view">
 		<div class="topic-list">
+			<loading v-show="loading"></loading>
 			<ul>
 				<li class="topic-item" v-for="topic in topics">
 					<span class="visit" title="点击量">{{topic.visit_count}}</span>
